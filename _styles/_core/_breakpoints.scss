@@ -1,0 +1,90 @@
+/*min breakpoints*/
+$breakpoint-min_xl: 1200px;
+$breakpoint-min_lg: 1024px;
+$breakpoint-min_md: 768px;
+$breakpoint-min_sm: 500px;
+$breakpoint-min_xs: 320px;
+
+/*max breakpoints*/
+$breakpoint-max_xl: 1199px;
+$breakpoint-max_lg: 1023px;
+$breakpoint-max_md: 767px;
+$breakpoint-max_sm: 499px;
+$breakpoint-max_xs: 319px;
+
+/* breakpoint  mixin */
+/**************************
+
+NOTES:
+Be mindful of the cascade if adding 
+multiple breakpoint rules for the same class
+
+min breakpoints:
+    use from smallest > largest
+
+max breakpoints:
+    use from largest > smallest
+
+**************************/
+/**************************
+
+USEAGE
+
+@include breakpoint("max_xl") {
+    your rules here
+}
+
+**************************/
+
+@mixin breakpoint($type) {
+    @if $type=="min_xl" {
+        @media only screen and (min-width: $breakpoint-min_xl) {
+            @content;
+        }
+    }
+    @else if $type=="min_lg" {
+        @media only screen and (min-width: $breakpoint-min_lg) {
+            @content;
+        }
+    }
+    @else if $type=="min_md" {
+        @media only screen and (min-width: $breakpoint-min_md) {
+            @content;
+        }
+    }
+    @else if $type=="min_sm" {
+        @media only screen and (min-width: $breakpoint-min_sm) {
+            @content;
+        }
+    }
+    @else if $type=="min_xs" {
+        @media only screen and (min-width: $breakpoint-min_xs) {
+            @content;
+        }
+    }
+    @else if $type=="max_xl" {
+        @media only screen and (max-width: $breakpoint-max_xl) {
+            @content;
+        }
+    }
+    @else if $type=="max_lg" {
+        @media only screen and (max-width: $breakpoint-max_lg) {
+            @content;
+        }
+    }
+    @else if $type=="max_md" {
+        @media only screen and (max-width: $breakpoint-max_md) {
+            @content;
+        }
+    }
+    @else if $type=="max_sm" {
+        @media only screen and (max-width: $breakpoint-max_sm) {
+            @content;
+        }
+    }
+    @else if $type=="max_xs" {
+        @media only screen and (max-width: $breakpoint-max_xs) {
+            @content;
+        }
+    }
+}

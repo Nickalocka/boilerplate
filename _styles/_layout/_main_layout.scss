@@ -1,0 +1,17 @@
+html {
+    line-height: $main_line-height;
+}
+
+body {
+    font-family: $main_font-family;
+    font-size: $main_font-size;
+}
+
+.main-wrapper {
+    max-width: $main-layout_max-width;
+    margin: 0px auto;
+    padding: 0px $main-layout_padding;
+    @include breakpoint("max_sm") {
+        padding: 0px calc(#{$main-layout_padding} / 2);
+    }
+}

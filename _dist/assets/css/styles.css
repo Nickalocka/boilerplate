@@ -389,5 +389,49 @@ template {
 [hidden] {
   display: none; }
 
+/*min breakpoints*/
+/*max breakpoints*/
+/* breakpoint  mixin */
+/**************************
+
+NOTES:
+Be mindful of the cascade if adding 
+multiple breakpoint rules for the same class
+
+min breakpoints:
+    use from smallest > largest
+
+max breakpoints:
+    use from largest > smallest
+
+**************************/
+/**************************
+
+USEAGE
+
+@include breakpoint("max_xl") {
+    your rules here
+}
+
+**************************/
+/* fonts */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2; }
+
+html {
+  line-height: 1.4; }
+
 body {
-  margin: 0; }
+  font-family: Sans-Serif;
+  font-size: 16px; }
+
+.main-wrapper {
+  max-width: 1000px;
+  margin: 0px auto;
+  padding: 0px 40px; }
+  @media only screen and (max-width: 499px) {
+    .main-wrapper {
+      padding: 0px calc(40px / 2); } }
+
+button, input, optgroup, select, textarea {
+  max-width: 100%; }
