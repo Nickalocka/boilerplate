@@ -1,3 +1,55 @@
-button, input, optgroup, select, textarea {
+.form-wrap {
+
+}
+
+.fieldset {
+    margin: 1.5em 0px;
+    padding: 0px;
+    border: 0px;
+    min-width: 100%;
     max-width: 100%;
+
+    legend {
+        font-size: 1.2rem;
+    }
+
+    &:first-child {
+        margin-top: 0px;
+    }
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.form-block {
+
+    margin: 1em 0px;
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+        max-width: 100%;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.checkbox, .radio {
+    margin: 5px 0px;
+    label {
+        display: initial;
+    }
+
+    &:last-child {
+        margin: 0px;
+    }
 }

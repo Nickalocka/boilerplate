@@ -417,6 +417,8 @@ USEAGE
 /* fonts */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0px; }
 
 html {
   line-height: 1.4; }
@@ -428,10 +430,45 @@ body {
 .main-wrapper {
   max-width: 1000px;
   margin: 0px auto;
-  padding: 0px 40px; }
+  padding: 40px; }
   @media only screen and (max-width: 499px) {
     .main-wrapper {
-      padding: 0px calc(40px / 2); } }
+      padding: calc(40px / 2); } }
 
-button, input, optgroup, select, textarea {
+.fieldset {
+  margin: 1.5em 0px;
+  padding: 0px;
+  border: 0px;
+  min-width: 100%;
   max-width: 100%; }
+  .fieldset legend {
+    font-size: 1.2rem; }
+  .fieldset:first-child {
+    margin-top: 0px; }
+  .fieldset:last-child {
+    margin-bottom: 0px; }
+
+.form-block {
+  margin: 1em 0px; }
+  .form-block button,
+  .form-block input,
+  .form-block optgroup,
+  .form-block select,
+  .form-block textarea {
+    max-width: 100%; }
+    .form-block button:focus,
+    .form-block input:focus,
+    .form-block optgroup:focus,
+    .form-block select:focus,
+    .form-block textarea:focus {
+      outline: none; }
+  .form-block label {
+    display: block;
+    margin-bottom: 5px; }
+
+.checkbox, .radio {
+  margin: 5px 0px; }
+  .checkbox label, .radio label {
+    display: initial; }
+  .checkbox:last-child, .radio:last-child {
+    margin: 0px; }

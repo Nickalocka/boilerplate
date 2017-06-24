@@ -14,117 +14,151 @@
 
         </header>
 
-        <main role="main">
-
-            <h1>Header Number One</h1>
-
-            <div>
-                        <p><a href="#!">This is a text link</a>.</p>
-                        <p><strong>Strong is used to indicate strong importance.</strong></p>
-                        <p><em>This text has added emphasis.</em></p>
-                        <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>
-                        <p>The <i>i element</i> is text that is offset from the normal text.</p>
-                        <p>The
-                            <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>
+        <main role="main" class="main-layout-wrapper">
+            <section class="layout-chunk">
+                <form class="form-wrap">
+                    <fieldset class="fieldset">
+                        <legend>Some common form elements</legend>
                         <p>
-                            <del>This text is deleted</del> and
-                            <ins>This text is inserted</ins>.</p>
-                        <p>
-                            <s>This text has a strikethrough</s>.</p>
-                        <p>Superscript<sup>®</sup>.</p>
-                        <p>Subscript for things like H<sub>2</sub>O.</p>
-                        <p><small>This small text is small for for fine print, etc.</small></p>
-                        <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
-                        <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q></p>
-                        <p><cite>This is a citation.</cite></p>
-                        <p>The <dfn>dfn element</dfn> indicates a definition.</p>
-                        <p>The
-                            <mark>mark element</mark> indicates a highlight.</p>
-                        <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
-                        <p>The time element:
-                            <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time>
+                            Some explaination of expected input
                         </p>
-                    </div>
-
-            <h2>Header Number Two</h2>
-
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-                quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-                Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-            <h3>Header Number Three</h3>
-
-            <ul>
-                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam.
-                    Sed arcu. Cras consequat.</li>
-                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
-                    Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
-                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus.
-                    Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
-                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
-            </ul>
-
-            <h4>Header Number Four</h4>
-
-            <form action="#" method="post">
-                <div>
-                    <label for="name">Text Input:</label>
-                    <input type="text" name="name" id="name" value="" tabindex="1" />
-                </div>
-
-                <div>
-                    <h4>Radio Button Choice</h4>
-
-                    <label for="radio-choice-1">Choice 1</label>
-                    <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
-
-                    <label for="radio-choice-2">Choice 2</label>
-                    <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
-                </div>
-
-                <div>
-                    <label for="select-choice">Select Dropdown Choice:</label>
-                    <select name="select-choice" id="select-choice">
-                        <option value="Choice 1">Choice 1</option>
-                        <option value="Choice 2">Choice 2</option>
-                        <option value="Choice 3">Choice 3</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="textarea">Textarea:</label>
-                    <textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
-                </div>
-
-                <div>
-                    <label for="checkbox">Checkbox:</label>
-                    <input type="checkbox" name="checkbox" id="checkbox" />
-                </div>
-
-                <div>
-                    <input type="submit" value="Submit" />
-                </div>
-            </form>
-
-            <h5>Header Number Five</h5>
-
-            <ol>
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>Vestibulum auctor dapibus neque.</li>
-            </ol>
-
-            <h6>Header Number Six</h6>
-
-            <dl>
-                <dt>Definition list</dt>
-                <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-                <dt>Lorem ipsum dolor sit amet</dt>
-                <dd>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</dd>
-            </dl>
-
+                        <div class="form-block">
+                            <label>Text</label>
+                            <input type="text" value="Sample Value" />
+                        </div>
+                        <div class="form-block">
+                            <label>Number</label>
+                            <input type="number" value="4" />
+                        </div>
+                        <div class="form-block">
+                            <label>File</label>
+                            <input type="file" />
+                        </div>
+                        <div class="form-block">
+                            <label>Password</label>
+                            <input type="password" value="bgdr6hdrt!" />
+                        </div>
+                        <div class="form-block">
+                            <label>Date</label>
+                            <input type="date" value="2017-04-03" />
+                        </div>
+                        <div class="form-block">
+                            <label>Tel</label>
+                            <input type="tel" value="07703747173" />
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <legend>Radio Groups</legend>
+                        <p>
+                            Some explaination of expected input
+                        </p>
+                        <div class="form-block">
+                            <label>Radio Group One</label>
+                            <div class="radio-group">
+                                <div class="radio">
+                                    <label>Option 1
+                            <input type="radio" name="radiogrp1" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 2
+                            <input type="radio" name="radiogrp1" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 3
+                            <input type="radio" name="radiogrp1" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 4
+                            <input type="radio" name="radiogrp1" />
+                            </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-block">
+                            <label>Radio Group Two</label>
+                            <div class="radio-group">
+                                <div class="radio">
+                                    <label>Option 1
+                            <input type="radio" name="radiogrp2" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 2
+                            <input type="radio" name="radiogrp2" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 3
+                            <input type="radio" name="radiogrp2" />
+                            </label>
+                                </div>
+                                <div class="radio">
+                                    <label>Option 4
+                            <input type="radio" name="radiogrp2" />
+                            </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <legend>Single Checkbox</legend>
+                        <p>
+                            Some explaination of expected input
+                        </p>
+                        <div class="form-block">
+                            <div class="checkbox">
+                                <label>
+                        <span>I agree</span>
+                        <input type="checkbox" name="checkbox" />
+                        </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                        <legend>Checkbox Group</legend>
+                        <p>
+                            Some explaination of expected input
+                        </p>
+                        <div class="form-block">
+                            <div class="checkbox-group">
+                                <div class="checkbox">
+                                    <label>
+                            <span>Option 1</span>
+                            <input type="checkbox" name="checkbox1" />
+                            </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                            <span>Option 2</span>
+                            <input type="checkbox" name="checkbox1" />
+                            </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                            <span>Option 3</span>
+                            <input type="checkbox" name="checkbox1" />
+                            </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                            <span>Option 4</span>
+                            <input type="checkbox" name="checkbox1" />
+                            </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                            <span>Option 5</span>
+                            <input type="checkbox" name="checkbox1" />
+                            </label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
         </main>
         <footer>
 
