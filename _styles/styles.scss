@@ -1,6 +1,11 @@
-@import "_core/_normalise";
-@import "_core/_breakpoints";
-@import "_core/_variables";
-@import "_layout/_typography";
+$sticky-footer: true;
+
+
+@import "_layout/_normalise";
+@import "_layout/_breakpoints";
 @import "_layout/_main_layout";
+@import "_layout/_typography";
 @import "_layout/_forms";
+
+@import "_theme/_colors";
+@import "_theme/_main_layout";

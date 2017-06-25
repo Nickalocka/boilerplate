@@ -1,3 +1,25 @@
+$main_font-size: 16px;
+$main_font-family: Sans-Serif;
+$main_line-height: 1.4;
+$header_line-height: 1.2;
+$main-layout_max-width: 1000px;
+$main-layout_margin: 40px;
+$main-layout_padding: 40px;
+
+%main-layout_padding-ends {
+    padding: $main-layout_padding 0px;
+    @include breakpoint("max_sm") {
+        padding: calc(#{$main-layout_padding} / 2) 0px;
+    }
+}
+
+%main-layout_padding-sides {
+    padding: 0px $main-layout_padding;
+    @include breakpoint("max_sm") {
+        padding: 0px calc(#{$main-layout_padding} / 2);
+    }
+}
+
 html {
     line-height: $main_line-height;
 }
@@ -5,13 +27,50 @@ html {
 body {
     font-family: $main_font-family;
     font-size: $main_font-size;
+    @extend %body.theme;
+    @if ($sticky-footer==true) {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        main.main-content {
+            flex: 1;
+        }
+    }
 }
 
 .main-wrapper {
-    max-width: $main-layout_max-width;
+    @extend %main-layout_padding-sides;
     margin: 0px auto;
-    padding: $main-layout_padding;
-    @include breakpoint("max_sm") {
-        padding: calc(#{$main-layout_padding} / 2);
+    overflow: auto;
+    max-width: $main-layout_max-width;
+}
+
+header.main-header {
+    @extend %header.main-header.theme;
+    .main-header_title {
+        font-size: 1.5rem;
+        margin: 0.5em 0px;
     }
+}
+
+main.main-content {
+    @extend %main-layout_padding-ends;
+}
+
+footer.main-footer {
+    @extend %footer.main-footer.theme;
+}
+
+.columns {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -1em;
+    .column {
+        padding: 0px 1em;
+    }
+
+    &.stretched .column {
+        flex: 1;
+    }
+
 }

@@ -1,0 +1,21 @@
+$ColorPalette: ( 
+    mono: ( 
+    light: #FFF2E2, 
+    mid: #6B6660, 
+    dark: #242220, 
+    ), 
+    primary: ( 
+    light: #573628, 
+    mid: #774936, 
+    dark: #8F6A5A, 
+    ),
+    secondary: ( 
+    light: #C8D5B9, 
+    mid: #6A9377, 
+    dark: #4A7C59,
+    )
+);
+
+@function Color($palette, $tone: "mid") {
+    @return map-get(map-get($ColorPalette, $palette), $tone);
+}
